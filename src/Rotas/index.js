@@ -1,16 +1,41 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+/*import React from 'react';
+import {
+    BrowserRouter,
+    Routes,
+    Route
+} from "react-router-dom";
 
 import Home from '../paginas/Home';
 import Contato from '../paginas/Contato';
 
 const Rotas = () => (
     <BrowserRouter>
-        <Switch>
+        <Routes>
             <Route exact path='/' component={ Home } />
             <Route exact path='/contato' component={ Contato } />
-        </Switch>
+        </Routes>
     </BrowserRouter>
 );
 
-export default Rotas;
+export default Rotas;*/
+
+import React from 'react';
+import {
+    BrowserRouter,
+    Routes,
+    Route
+} from "react-router-dom";
+
+import Home from '../paginas/Home';
+import Contato from '../paginas/Contato';
+
+export default function Pages(){
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contato" element={<Contato />} />
+            </Routes>
+        </BrowserRouter>
+    );
+}
